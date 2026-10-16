@@ -1,0 +1,17 @@
+<header class="site-header">
+
+<nav>
+
+<a href = "{%url 'home'%}">Home</a>
+
+<a href = "{%url 'about'%}">About</a>
+
+<a href = "{%url 'expenses:expenses_list'%}">List of expenses</a>
+<a href = "{%url 'accounts:register'%}">Register</a>
+<a href = "{%url 'accounts:login'%}">Login</a>
+{% if user.is_authenticated%}
+    <a href = "{%url 'accounts:logout'%}">Logout</a>
+{% endif %}
+</nav>
+
+</header>
